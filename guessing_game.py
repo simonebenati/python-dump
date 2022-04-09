@@ -19,7 +19,7 @@ while tentatives < 6:
     guess = input()
 
     if guess == str(number):
-        print("Congratulations, you guessed it right, my number was: " + str(number))
+        print("Congratulations, you guessed it right, my number was: " + str(number) + " You guessed it in " + str(tentatives+1) + " tries")
         exit()
     elif tentatives == 5 and guess != str(number):
         print("Sorry, you tried too many times, better luck next time!")
