@@ -9,18 +9,21 @@ print("Selection 1: Apple, Banana, Orange")
 selection1 = ["Apple", "Banana", "Orange"]
 take1 = int(input())
 print("You selected " + str(selection1[take1-1]))
+inventory.append(selection1[take1-1])
 print("Seleciton 2: Sword, Spear, Axe")
 selection2 = ["Sword","Spear","Axe"]
 take2 = int(input())
 print("You selected " + str(selection2[take2-1]))
+inventory.append(selection2[take2-1])
 print("Selection 3: Heavy armor, Light armor, Mage armor")
 selection3 = ["Heavy armor", "Light armor", "Mage Armor"]
 take3 = int(input())
 print("You selected " + str(selection3[take3-1]))
+inventory.append(selection3[take3-1])
 print("")
 finalselection = [selection1[take1-1],selection2[take2-1],selection3[take3-1]]
-#print("DEBUG: " + str(finalselection) + " LEN " + str(len(finalselection)))
-print("So your composition is: " + selection1[take1-1] + ", " + selection2[take2-1] + " and " + selection3[take3-1] + ".")
+print("DEBUG: " + str(inventory) + " LEN " + str(len(inventory)))
+print("So your composition is: " + str(inventory) + ".")
 print("...")
 print("Are you happy with it or would you like to pick something else?")
 print("...")
@@ -34,11 +37,11 @@ elif choice.capitalize() == 'Pick':
     print("What would you like to pick?")
     take4 = int(input())
     print("Okay so you selected " + str(selection4[take4-1]) + ", What item would you like to drop for it?")
-    print(str(selection1[take1-1]) + " " + str(selection2[take2-1]) + " " + str(selection3[take3-1]))
+    print(str(inventory))
     drop = int(input())
-    del finalselection[drop-1]
-    finalselection.insert(drop-1 , selection4[take4-1])
-    print("Alright! You'll final inventory then would be: " + str(finalselection))
+    del inventory[drop-1]
+    inventory.insert(drop-1 , selection4[take4-1])
+    print("Alright! You'll final inventory then would be: " + str(inventory))
 
 
 
