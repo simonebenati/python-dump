@@ -23,7 +23,7 @@ regex_phone = re.compile(r"""
 #this regex identifies an email
 
 regex_email = re.compile(r"""
-[a-zA-Z0-9_.+]+                                 #part1 simone.benati@outlook.com.com I made this ((\w+) | (\w+\.\w+)) but guide uses
+[a-zA-Z0-9_.+]+                                 #part1  I made this ((\w+) | (\w+\.\w+)) but it's better to use what's running now for cleaner reading
 \@                                                # at sign @
 [a-zA-Z0-9_.+]+                                    #part2
 #\.                                                #dot .
