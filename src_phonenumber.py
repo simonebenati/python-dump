@@ -13,7 +13,13 @@ except AttributeError:
 
 #method 2 finds all the phone numbers in a given string
 
-print(src_pattern.findall(message)) #method findall
+fnd_nmbrs = src_pattern.findall(message) #method findall
+
+better_print = re.sub(r"\[|\]|'","",str(fnd_nmbrs))
+print(better_print)
+
+
+
 
 
 
