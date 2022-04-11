@@ -1,4 +1,6 @@
+#this program will scrape for emails and us/canadians phone numbers in a given text
 #! python3
+
 
 import pyperclip
 import re
