@@ -34,8 +34,9 @@ regex_email = re.compile(r"""
 """,re.VERBOSE)
 
 #We open a given pdf to analyze
-
-with open("/home/simone/examplePhoneEmailDirectory.pdf","rb") as wrk: #rb READ BINARY OR -> UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb5 in position 11: invalid start byte
+print("Insert absolute path without '' or \"\" \n")
+path_to_pdf = input()
+with open(path_to_pdf,"rb") as wrk: #rb READ BINARY OR -> UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb5 in position 11: invalid start byte
     pdf = pdftotext.PDF(wrk)
 
 #We create the string variable to parse with regex expressions
